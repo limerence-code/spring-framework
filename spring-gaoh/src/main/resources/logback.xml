@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!--控制台输出 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger{50}) - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="jdbc" level="INFO"/>
+	<logger name="org" level="INFO"/>
+	<logger name="net" level="INFO"/>
+	<logger name="sql" level="INFO"/>
+	<logger name="java.sql" level="INFO"/>
+	<logger name="javax" level="INFO"/>
+
+	<!--日志的输出级别由低到高（越来问题越严重）trace->debug->info->warn->error -->
+	<!-- root将级别为DEBUG及大于DEBUG的日志信息交给已经配置好的name='STDOUT'的appender处理，将信息打印到控制台-Console -->
+	<root level="DEBUG">
+		<!-- appender-ref标识这个appender将会添加到本应用的日志系统中 -->
+		<appender-ref ref="STDOUT"/>
+		<appender-ref ref="INFO"/>
+		<appender-ref ref="DEBUG"/>
+		<appender-ref ref="ERROR"/>
+	</root>
+</configuration>

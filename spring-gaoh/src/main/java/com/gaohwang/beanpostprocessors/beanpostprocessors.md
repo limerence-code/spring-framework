@@ -1,0 +1,35 @@
+1.可进行代理
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#resolveBeforeInstantiation
+InstantiationAwareBeanPostProcessor -->postProcessBeforeInstantiation
+
+2.推断构造方法
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#determineConstructorsFromBeanPostProcessors
+SmartInstantiationAwareBeanPostProcessor --> determineCandidateConstructors
+
+3.缓存一些meta信息
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#applyMergedBeanDefinitionPostProcessors
+MergedBeanDefinitionPostProcessor --> postProcessMergedBeanDefinition
+
+4.解决循环依赖
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#getEarlyBeanReference
+SmartInstantiationAwareBeanPostProcessor --> getEarlyBeanReference
+
+5.判断是否需要进行属性填充
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#populateBean-InstantiationAwareBeanPostProcessor–postProcessAfterInstantiation
+InstantiationAwareBeanPostProcessor --> postProcessAfterInstantiation
+
+6.进行属性注入
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#populateBean–InstantiationAwareBeanPostProcessor–postProcessPropertyValues
+InstantiationAwareBeanPostProcessor --> postProcessPropertyValues
+
+7.执行初始化方法
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#applyBeanPostProcessorsBeforeInitialization
+BeanPostProcessor --> postProcessBeforeInitialization
+
+8.springAop
+org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#applyBeanPostProcessorsAfterInitialization
+BeanPostProcessor --> postProcessAfterInitialization
+
+9.销毁bean
+org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor#postProcessBeforeDestruction
+InitDestroyAnnotationBeanPostProcessor -->postProcessBeforeDestruction

@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+}
+
+group 'org.springframework'
+version '6.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    //    test
+    implementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.0'
+    implementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.7.0'
+    implementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.7.0'
+
+
+    optional(project(":spring-aspects"))
+    optional(project(":spring-webmvc"))
+    implementation group: 'javax.annotation', name: 'javax.annotation-api', version: '1.3.2'
+
+//    compile("org.apache.tomcat.embed:tomcat-embed-core:9.0.14")
+//    compile("org.apache.tomcat.embed:tomcat-embed-el:9.0.14")
+//    compile("org.apache.tomcat.embed:tomcat-embed-jasper:9.0.14")
+    //tomcat 9.0.14
+//    implementation group: "org.apache.tomcat.embed", name: "tomcat-embed-core", version: "9.0.14"
+    implementation group: "org.apache.tomcat.embed", name: "tomcat-embed-el", version: "9.0.14"
+    implementation group: "org.apache.tomcat.embed", name: "tomcat-embed-jasper", version: "9.0.14"
+
+    implementation group: "org.projectlombok", name: "lombok", version: "1.18.16"
+
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.2.68'
+
+    implementation group: "org.openjdk.jol", name: 'jol-core', version: '0.9'
+
+    //mybatis-spring
+    optional(project(":spring-jdbc"))
+    implementation group: 'org.mybatis', name: 'mybatis', version: '3.5.5'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
+
+    //    spring 6.0
+    implementation group: 'org.mybatis', name: 'mybatis-spring', version: '3.0.0'
+//    implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.5'
+//    implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
