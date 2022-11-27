@@ -1,7 +1,7 @@
 package com.gaohwang.tomcat.servlet;
 
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 /**
  * @author gaoh

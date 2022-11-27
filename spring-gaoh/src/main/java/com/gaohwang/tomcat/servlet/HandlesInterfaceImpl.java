@@ -3,7 +3,7 @@ package com.gaohwang.tomcat.servlet;
 import com.gaohwang.util.LoggerUtils;
 import org.slf4j.Logger;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 /**
  * @author gaoh

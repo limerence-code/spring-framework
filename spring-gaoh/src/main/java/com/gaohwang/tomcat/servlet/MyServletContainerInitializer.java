@@ -1,12 +1,12 @@
 package com.gaohwang.tomcat.servlet;
 
+import jakarta.servlet.ServletContainerInitializer;
+import jakarta.servlet.annotation.HandlesTypes;
 import org.springframework.core.annotation.AnnotationAwareOrderComparator;
 import org.springframework.util.ReflectionUtils;
 
-import javax.servlet.ServletContainerInitializer;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.HandlesTypes;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Collections;
