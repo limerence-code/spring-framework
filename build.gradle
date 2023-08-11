@@ -20,6 +20,9 @@ ext {
 
 configure(allprojects) { project ->
 	repositories {
+		maven { url 'https://maven.aliyun.com/repository/public' }
+		maven { url 'https://maven.aliyun.com/repository/spring' }
+//		maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
 		mavenCentral()
 		maven {
 			url "https://repo.spring.io/milestone"
