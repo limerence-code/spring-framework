@@ -24,7 +24,7 @@ import java.util.Map;
 public class TestController {
 	Logger log = LoggerUtils.getLog(TestController.class);
 
-	@Autowired
+//	@Autowired
 	private StudentService studentService;
 
 

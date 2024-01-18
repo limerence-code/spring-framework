@@ -34,7 +34,7 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer {
 		LoggerUtils.log.info("======================WebApplicationInitializer======================");
 		AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
 		context.register(Config.class);
-		context.register(MybatisConfig.class);
+//		context.register(MybatisConfig.class);
 		context.refresh();
 
 		// Create and register the DispatcherServlet
