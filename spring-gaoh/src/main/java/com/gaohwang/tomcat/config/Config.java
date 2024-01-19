@@ -15,8 +15,12 @@ import java.util.List;
 
 
 /**
- * 转换器执行位置
+ * 转换器执行位置-AbstractMessageConverterMethodProcessor#writeWithMessageConverters
  * AbstractMessageConverterMethodProcessor#writeWithMessageConverters(T, org.springframework.core.MethodParameter, org.springframework.http.server.ServletServerHttpRequest, org.springframework.http.server.ServletServerHttpResponse)
+ * <p>
+ * 参数解析和执行结果返回-ServletInvocableHandlerMethod#invokeAndHandle
+ * org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod#invokeAndHandle(org.springframework.web.context.request.ServletWebRequest, org.springframework.web.method.support.ModelAndViewContainer, java.lang.Object...)
+ *
  * @Author: GH
  * @Date: 2019/12/10 23:41
  * @Version 1.0
@@ -34,6 +38,7 @@ public class Config extends WebMvcConfigurationSupport {
 
 	/**
 	 * fastJson转换器
+	 *
 	 * @return
 	 */
 	private HttpMessageConverter<?> fastConverter() {
