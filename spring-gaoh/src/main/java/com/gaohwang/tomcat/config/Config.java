@@ -27,14 +27,14 @@ import java.util.List;
  */
 @Configurable
 @ComponentScan("com.gaohwang.tomcat")
-public class Config extends WebMvcConfigurationSupport {
+public class Config /*extends WebMvcConfigurationSupport*/ {
 
-	@Override
+	/*@Override
 	protected void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
 		super.extendMessageConverters(converters);
 		converters.add(fastConverter());
 
-	}
+	}*/
 
 	/**
 	 * fastJson转换器
