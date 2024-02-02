@@ -1,5 +1,7 @@
 package com.gaohwang.async;
 
+import com.gaohwang.async.service.ASyncService;
+import com.gaohwang.async.service.BSyncService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -10,7 +12,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class AsyncTest {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AsyncConfig.class);
-		HelloService helloService = context.getBean(HelloService.class);
-		helloService.fun1();
+		ASyncService aSyncService = context.getBean(ASyncService.class);
+		aSyncService.hello(1);
+		context.getBean(BSyncService.class);
 	}
 }
